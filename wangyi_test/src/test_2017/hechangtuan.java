@@ -27,10 +27,13 @@ import java.util.List;
 输出49
  */
 
-//换句话说，就是求指定数目的乘积最大值
+//换句话说，就是从m中选n个数，要求这n个数目的乘积最大值
+
 public class hechangtuan {
 
 	public static void main(String[] args) throws RuntimeException, IOException {
+		//获取当前时间
+		Long starttime = System.currentTimeMillis();
 		//首先处理输入
 		//第一行输入的是学生人数
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -77,6 +80,9 @@ public class hechangtuan {
 			}
 		}
 		System.out.println(max);
+		System.out.println("--------");
+		Long endtime = System.currentTimeMillis();
+		System.out.println("运行时间："+(endtime-starttime));
 	}
 	
 	public static List getSubArrays(int[] nums,int[] a){
